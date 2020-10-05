@@ -1,0 +1,32 @@
+
+<%@ page language="java" pageEncoding="UTF-8" %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    
+    <body>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>styles/css/style.css">
+        <!--<link rel="stylesheet" href="<%= request.getContextPath() %>styles/css/bootstrap.css">-->
+        <input type="checkbox" id="check" class="check-menu">
+        <label for="check">
+            <img class="img-menu" src="<%= request.getContextPath() %>/styles/icon-main.png">
+        </label>
+        <nav>
+            <ul>
+                <li><a href="<%= request.getContextPath() %>/index.jsp" class="link-menu">INÍCIO</a></li>
+            </ul>
+        </nav>
+            <pre>
+                
+            </pre>
+            
+            
+    </body>
+    
+</html>
+    
+
+
