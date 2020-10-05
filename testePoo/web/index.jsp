@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/css/style.css">
         <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/css/bootstrap.css">
-        <title>Indice - Cadastros</title>
+        <title>Início</title>
     </head>
     <body class="body-index">
         <%@include file="WEB-INF/jspf/header.jspf" %>

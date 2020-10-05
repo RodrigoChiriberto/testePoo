@@ -17,6 +17,7 @@
         <nav>
             <ul>
                 <li><a href="<%= request.getContextPath() %>/index.jsp" class="link-menu">INÍCIO</a></li>
+                <li><a href="<%= request.getContextPath() %>/about.jsp" class="link-menu">SOBRE</a></li>
             </ul>
         </nav>
             <pre>
