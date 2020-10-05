@@ -2,6 +2,7 @@
     Author     : rodrigo.matos
 --%>
 
+<%@page import="br.edu.fatecpg.avaliacaoPoo.Disciplina"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +19,7 @@
             <h1>AVALIAÇÃO BIMESTRAL (P1) - POO</h1>
             <h2>Nome: Rodrigo dos Santos Chiriberto Matos</h2>
             <h2>RA: 1290481823036</h2>
-            <h2>5º ciclo - Quantidade de disciplinas matriculadas: <% %></h2>
+            <h2>5º ciclo - Quantidade de disciplinas matriculadas: <%= Disciplina.getList().size() %></h2>
         </div>
     </body>
 </html>

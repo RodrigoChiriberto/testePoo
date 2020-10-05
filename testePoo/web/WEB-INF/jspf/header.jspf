@@ -18,6 +18,7 @@
             <ul>
                 <li><a href="<%= request.getContextPath() %>/index.jsp" class="link-menu">INÍCIO</a></li>
                 <li><a href="<%= request.getContextPath() %>/about.jsp" class="link-menu">SOBRE</a></li>
+                <li><a href="<%= request.getContextPath() %>/disciplinas.jsp" class="link-menu">DISCIPLINAS</a></li>
             </ul>
         </nav>
             <pre>

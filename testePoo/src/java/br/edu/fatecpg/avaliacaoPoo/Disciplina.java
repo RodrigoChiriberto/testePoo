@@ -14,11 +14,11 @@ public class Disciplina {
     private int ciclo;
     private float nota;
 
-    public Disciplina(String name, String ementa, int ciclo) {
-        this.name = name;
-        this.ementa = ementa;
-        this.ciclo = ciclo;
-        this.nota = 0;
+public Disciplina(String name, String ementa, int ciclo) {
+    this.name = name;
+    this.ementa = ementa;
+    this.ciclo = ciclo;
+    this.nota = 0;
     }
     
     public int getCiclo() {
@@ -57,9 +57,12 @@ public class Disciplina {
 
     private static ArrayList<Disciplina> list;
     
-    public static ArrayList getList(){
+    public static ArrayList<Disciplina> getList(){
+        
         if (list == null){
             list = new ArrayList<>();
+            
+            //list.add(new Disciplina("Materia", "Ementa", 5));
                         
             list.add(new Disciplina("Gestão de Projetos", "Definição de projeto segundo concepção difundida pelas melhores práticas de gestão de projetos. Histórico do desenvolvimento do conjunto de conhecimentos de gestão de projetos. Comparação ente o gerenciamento por projetos com o gerenciamento tradicional. O ciclo de vida de um projeto. Os fatores de sucesso e insucesso de projetos e sua mensuração. As nove de conhecimento para a gestão de projetos e seus processos : Integração, Escopo, Tempo, Custo, Qualidade, Recursos Humanos, Comunicações, Riscos e Aquisições.", 5));
             list.add(new Disciplina("Laboratório de Banco de Dados", "Tecnologias emergentes de mercado que serão aplicadas em laboratório", 5));
