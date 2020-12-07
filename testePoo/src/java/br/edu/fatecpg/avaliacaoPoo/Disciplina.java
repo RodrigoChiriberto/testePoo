@@ -6,19 +6,40 @@
 package br.edu.fatecpg.avaliacaoPoo;
 
 import java.util.ArrayList;
+import java.sql.*;
+import web.DbListener;
 
 
 public class Disciplina {
-    private String name;
-    private String ementa;
+    
+    public static ArrayList<Disciplina> getList() throws Exception{
+        ArrayList<Disciplina> list = new ArrayList<>();
+        
+        Class.forName("org.sqlite.JDBC");
+            
+        Connection con = DriverManager.getConnection(web.DbListener.URL);
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("select * from disciplinas");
+        
+        while(list.next()){
+            list.add(new Disciplina(rs.getInt("id"), rs.getString("nm"), rs.getString("emt"), rs.getString("ciclo"), rs.getFloat("nt")))
+        }
+        
+        rs.close();
+        stmt.close();
+        con.close();
+    }
+    
+    private String nm;
+    private String emt;
     private int ciclo;
-    private float nota;
+    private float nt;
 
 public Disciplina(String name, String ementa, int ciclo) {
-    this.name = name;
-    this.ementa = ementa;
+    this.nm = name;
+    this.emt = ementa;
     this.ciclo = ciclo;
-    this.nota = 0;
+    this.nt = 0;
     }
     
     public int getCiclo() {
@@ -29,28 +50,28 @@ public Disciplina(String name, String ementa, int ciclo) {
         this.ciclo = ciclo;
     }
 
-    public String getName() {
-        return name;
+    public String getNm() {
+        return nm;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNm(String nm) {
+        this.nm = nm;
     }
 
-    public String getEmenta() {
-        return ementa;
+    public String getEmt() {
+        return emt;
     }
 
-    public void setEmenta(String ementa) {
-        this.ementa = ementa;
+    public void setEmt(String emt) {
+        this.emt = emt;
     }
 
-    public float getNota() {
-        return nota;
+    public float getNt() {
+        return nt;
     }
 
-    public void setNota(float nota) {
-        this.nota = nota;
+    public void setNt(float nt) {
+        this.nt = nt;
     }
     
     
